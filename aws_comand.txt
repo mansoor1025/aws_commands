@@ -1,6 +1,6 @@
 chmod 0400 doclink.pem
 ssh -i doclink.pem ubuntu@54.216.67.72
-
+ 
 chmod 0400 doclink-new.pem
 ssh -i doclink-new.pem ubuntu@3.248.146.200
 
