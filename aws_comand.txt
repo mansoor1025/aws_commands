@@ -1,0 +1,55 @@
+chmod 0400 doclink.pem
+ssh -i doclink.pem ubuntu@54.216.67.72
+
+chmod 0400 doclink-new.pem
+ssh -i doclink-new.pem ubuntu@3.248.146.200
+
+//check port listen
+sudo lsof -i -P -n | grep LISTEN
+
+// delete a directory
+sudo rm -rf doclink-admin-api-test
+
+// delete a file
+sudo rm file_name
+
+// port kill command
+sudo kill -9 464123
+
+// mongodb restart command
+sudo systemctl restart mongodb
+
+// aws permission to directory read,write,update accesscd
+sudo chmod -R 777 ./
+
+// Doclink admin api start
+	
+npm start >> /tmp/DoclinkGraphQL.log 2>> /tmp/DoclinkGraphQL.err &
+0
+npm start >> /tmp/DoclinkAdminPanelBackend.log 2>> /tmp/DoclinkAdminPanelBackend.err &
+
+db.subs_features.updateOne({feature_id: 32,subs_id: 3,id:61},{$set:{details:"Unlimited"}})
+db.subs_features.deleteOne({feature_id: 27,subs_id: 3,id:59})
+
+db.users.deleteOne({user_id:925})
+db.doctor_qualifications.deleteOne({doctor_id:278})
+db.doctor_services.deleteOne({doctor_id:278})
+
+db.subs_features.findOne({feature_id:'*Chat & voice notes',subs_id:1})
+// download and upload over SSH
+
+// Download
+scp -i doclink.pem ubuntu@54.216.67.72:/doclink-admin.zip /Users/areebvohra/Desktop
+
+scp -i doclink.pem ubuntu@54.216.67.72:/archivename.zip /Users/areebvohra/Desktop
+
+// Upload
+scp -i doclink-new.pem /Users/areebvohra/Desktop/doclink-admin.zip ubuntu@3.248.146.200:~/
+
+// mongodb update command
+
+db.purchase_video_calls.updateMany(
+{pvc_id: 34},
+{$set: { is_active:0}})
+
+db.doctor_timeslots.deleteMany({doctor_id: {$nin: [428,468,469,470,471,499]}})
